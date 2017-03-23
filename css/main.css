@@ -445,3 +445,77 @@ template {
 [hidden] {
   display: none;
 }
+
+body {
+  background-color: #8593AE;
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  height: 200px;
+}
+
+.main {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row;
+}
+
+.flex-contain {
+  border: solid 2px black;
+  padding: 20px;
+  width: 44%;
+}
+.flex-contain p {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 300px;
+  background-color: gray;
+  padding: 15px;
+}
+
+.cloud {
+  opacity: 0.7;
+  width: 200px;
+  height: 60px;
+  background: white;
+  border-radius: 200px;
+  -moz-border-radius: 200px;
+  -webkit-border-radius: 200px;
+  position: relative;
+}
+
+.cloud:before, .cloud:after {
+  content: '';
+  position: absolute;
+  background: white;
+  width: 100px;
+  height: 90px;
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  border-radius: 100px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+}
+
+.cloud:after {
+  width: 120px;
+  height: 120px;
+  top: -60px;
+  left: auto;
+  right: 15px;
+}
+
+@media only screen and (max-width: 500px) {
+  .main {
+    flex-flow: column;
+  }
+}
